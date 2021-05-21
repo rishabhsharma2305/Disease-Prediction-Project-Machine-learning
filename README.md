@@ -21,4 +21,6 @@
     8.2) server.py
 9) Frontend
     9.1) heart.html
+10) running the project
+   10.1) run file server.py
 
