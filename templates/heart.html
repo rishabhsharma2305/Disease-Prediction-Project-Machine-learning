@@ -15,6 +15,7 @@
         background-image: url("{{ url_for('static', filename='img/disease2.jpg') }}");
         background-size: 100%;
         height: 1000px ;
+        background-repeat: no-repeat;
     }
 
     .container{
@@ -115,25 +116,25 @@
         <h2>Please fill the details in the form below</h2>
         <form action="{{ url_for('result')}}" method="post">
             <div class="form-group">
-                <input class="placeText" type="text" name="age" placeholder="Enter you Age">
+                <input class="placeText" type="number"  required name="age" placeholder="Enter you Age">
             </div>
             <div class="form-group">
-                <input class="placeText" type="text" name="cp" placeholder="Enter you Chest pain">
+                <input class="placeText" type="number"  required name="cp" placeholder="Enter you Chest pain">
             </div>
             <div class="form-group">
-                <input class="placeText" type="text" name="heart_rate" placeholder="Enter maximum heart rate achieved">
+                <input class="placeText" type="number"  required name="heart_rate" placeholder="Enter maximum heart rate achieved">
             </div>
             <div class="form-group">
-                <input class="placeText" type="text" name="exang" placeholder="Enter you Exercise induced angina(1 = Yes or 0 = No)">
+                <input class="placeText" type="number"  required name="exang" placeholder="Enter you Exercise induced angina(1 = Yes or 0 = No)">
             </div>
             <div class="form-group">
-                <input class="placeText" type="text" name="depp" placeholder="Enter depression induced by exercise relative to rest">
+                <input class="placeText" type="number"  required name="depp" placeholder="Enter depression induced by exercise relative to rest">
             </div>
             <div class="form-group">
-                <input class="placeText" type="text" name="slope" placeholder="Enter slope of the peak exercise ST segment">
+                <input class="placeText" type="number"  required name="slope" placeholder="Enter slope of the peak exercise ST segment">
             </div>
             <div class="form-group">
-                <input class="placeText" type="text" name="vessels" placeholder="Enter number of major vessels colored by flourosopy">
+                <input class="placeText" type="number"  required name="vessels" placeholder="Enter number of major vessels colored by flourosopy">
             </div>
             <button class="btn">Submit</button>
         </form>
