@@ -7,7 +7,7 @@ def res(a=0):
 
 @app.route("/", methods=['GET','POST'])
 def home():
-    return render_template("heart.html")
+    return render_template("updated.html")
 
 @app.route("/result", methods=['GET','POST'])
 def result():
@@ -20,6 +20,8 @@ def result():
         person_slope= int(request.form.get("slope"))
         person_vessels= int(request.form.get("vessels"))
         ans= ml.calcutale_result(person_age, person_cp, person_heart_rate, person_exang, person_depp, person_slope, person_vessels)
-    return render_template("heart.html", val= ans)
+        if ans==0:
+            return render_template("updated.html", val= "You are safe")
+    return render_template("updated.html", val= "You are at risk")
 if __name__=='__main__':
     app.run(debug=True)
