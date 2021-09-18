@@ -155,25 +155,25 @@
             <h2>Please enter details for prediction</h2>
             <form action="{{ url_for('result')}}" method="post">
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="age" placeholder="Enter you Age">
+                    <input class="placeText" type="number" min="1" max="150"  required name="age" placeholder="Enter you Age">
                 </div>
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="cp" placeholder="Enter you Chest pain">
+                    <input class="placeText" type="number" min="0" max="1" required name="cp" placeholder="Enter you Chest pain">
                 </div>
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="heart_rate" placeholder="Enter maximum heart rate achieved">
+                    <input class="placeText" type="number" min="0" max="200" required name="heart_rate" placeholder="Enter maximum heart rate achieved">
                 </div>
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="exang" placeholder="Enter you Exercise induced angina(1 = Yes or 0 = No)">
+                    <input class="placeText" type="number" min="0" max="1" required name="exang" placeholder="Enter you Exercise induced angina(1 = Yes or 0 = No)">
                 </div>
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="depp" placeholder="Enter depression induced by exercise relative to rest">
+                    <input class="placeText" type="number" min="90" max="150" required name="depp" placeholder="Enter depression induced by exercise relative to rest">
                 </div>
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="slope" placeholder="Enter slope of the peak exercise ST segment">
+                    <input class="placeText" type="number"  min="0" max="2" required name="slope" placeholder="Enter slope of the peak exercise ST segment">
                 </div>
                 <div class="form-group">
-                    <input class="placeText" type="number"  required name="vessels" placeholder="Enter number of major vessels colored by flourosopy">
+                    <input class="placeText" type="number"  min="0" max="5" required name="vessels" placeholder="Enter number of major vessels colored by flourosopy">
                 </div>
                 <button class="btn">Submit</button>
             </form>
